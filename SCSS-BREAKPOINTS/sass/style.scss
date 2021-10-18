@@ -1,0 +1,15 @@
+@import './layout/header';
+@import './components/card',
+'./components/btn';
+//Always import breakpoints scss files at the end. It needs to recognize everything above.
+@import './abstracts/breakpoints',
+'./abstracts/breakpoints--Method';
+//Which method to choose ?
+// Method 1 is great for small projects. 
+//-----------------------------------------------------------------
+// Method 2 is best for the big projects.
+//*********************************************************************
+//M1 provides a fast development + your media queries are seperated for each element.
+//---------------------------------------------------------------------------------------------
+//M2 provides a more complex and neat design. It removes the dublication of media queries.
+//and it provides a compact , easy to read environment.

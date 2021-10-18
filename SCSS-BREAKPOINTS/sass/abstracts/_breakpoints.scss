@@ -1,0 +1,16 @@
+//-------------------------------------Method 1 -------------------------------------------
+@use 'sass:map';
+//think @use like 'using' in C# . We are adding SASS Maps (similar to Dictionaries in C#) to our file.
+$breakpoints:( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px);
+// As you can see, it has a fairly similar syntax. Keys and Values.
+//We create a Mixin with an argument of $key.
+@mixin mediaQ($key) {
+    $size: map-get($map: $breakpoints, $key: $key);
+    //This means size = value of breakpoints[key]. 
+    //Key is what we are going to pass as an parameter like : sm , md , lg etc..
+    //As the size stores the value we need. E.g 576, 1400 or 992, we pass it to the media query.
+    @media (min-width: $size) {
+        @content;
+        //This line lets us to write css for the specific breakpoint
+    }
+}

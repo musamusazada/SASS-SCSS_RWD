@@ -1,0 +1,17 @@
+.card {
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+
+@mixin card--sm() {
+    .card {
+        background: blue;
+    }
+}
+
+@mixin card--lg() {
+    .card {
+        background: green;
+    }
+}

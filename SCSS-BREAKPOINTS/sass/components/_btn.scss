@@ -1,0 +1,18 @@
+.btn {
+    width: 100px;
+    height: 100px;
+    background: red;
+    margin-top: 20px;
+    // @include mediaQ(sm){
+    //     background: darkblue;
+    // }
+    // @include mediaQ(lg){
+    //     background: pink;
+    // }
+}
+
+@include btn--sm() {
+    .btn {
+        background: green;
+    }
+}
